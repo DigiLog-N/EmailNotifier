@@ -1,6 +1,5 @@
-# EmailNotifier
-
-EMail notification implementation is now part of the DigiLog-N project. This project is kept for reference, but is no longer needed to demo DigiLog-N.
+EMail notification implementation is now part of the DigiLog-N project.
+This project is kept for reference, but is no longer needed to demo DigiLog-N.
 
 sendmail.py:	A command-line utility to send a text file (and possibly an html file) as an email message to multiple users.
 The main() function in sendmail.py can be called directly from another program to incorporate sending mail functionality into your program.

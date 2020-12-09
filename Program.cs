@@ -1,12 +1,16 @@
-﻿
+//-----------------------------------------------------------------------------
+// Program.cs
+// Example C# program to send email using Gmail server.
+// https://github.com/DigiLog-N/EmailNotifier
 //
-// Simple C# program to send an email using Gmail server
+// This example code should be considered licensed under MIT License for
+// portions taken from Stack Overflow. Author Scott Lysle should be contacted
+// for the portions taken from the c-sharpcorner article.
 //
 // Based on the following posts:
 // (1) Basic mail/SMTP function calls from: https://www.c-sharpcorner.com/article/send-text-message-to-cell-phones-from-a-C-Sharp-application/
 // (2) How to set credentials from: https://stackoverflow.com/questions/2766928/how-to-set-username-and-password-for-smtpclient-object-in-net
-// (3) How to deal with System.Net.Mail.SmtpException "The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Must issue a STARTTLS command first.", code taken from:
-//     https://stackoverflow.com/questions/17462628/the-server-response-was-5-7-0-must-issue-a-starttls-command-first-i16sm1806350
+// (3) How to deal with System.Net.Mail.SmtpException "The SMTP server requires a secure connection or the client was not authenticated. The server response was: 5.7.0 Must issue a STARTTLS command first.", code taken from: https://stackoverflow.com/questions/17462628/the-server-response-was-5-7-0-must-issue-a-starttls-command-first-i16sm1806350
 //
 // NB: For this simple example, the Gmail account password is stored right in this file.
 //
@@ -14,7 +18,8 @@
 //     Do this by logging into the Google account; go to Settings ==> Security and look for "Less secure app access".  If this
 //     method of sending email hasn't been used in a while, Google will automatically turn this option OFF and you will need to
 //     log back in and turn it ON again.
-//
+//-----------------------------------------------------------------------------
+
 
 using System;
 using System.Net.Mail;
@@ -44,7 +49,7 @@ namespace SendEmailExample
                 //     If we use this method, give the message a little time before quitting the program
                 smtpClient.SendAsync(message,null);
                 System.Threading.Thread.Sleep(5000);
-                
+
             }
             catch (Exception ex)
             {
