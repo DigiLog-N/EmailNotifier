@@ -319,7 +319,7 @@ if __name__ == '__main__':
 
     args = parser.parse_args()
 
-    #addressed_to = ['unique.identifier@gmail.com', 'ucsdboy@gmail.com']
+    #addressed_to = ['user.1@gmail.com', 'user.2@gmail.com']
 
     print(args.recipient)
 
